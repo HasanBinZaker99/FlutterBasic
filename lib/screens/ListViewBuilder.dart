@@ -13,6 +13,7 @@ class ListViewBuilderEx extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow.shade700,
       appBar: AppBar(
         title: Text("Navigation Drawer"),
       ),
@@ -69,7 +70,7 @@ class ListViewBuilderEx extends StatelessWidget {
               );
             }),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.add),
@@ -84,6 +85,8 @@ class ListViewBuilderEx extends StatelessWidget {
         //mini: true,
       ),
       bottomNavigationBar: BottomAppBar(
+          notchMargin: 5.0,
+          shape: CircularNotchedRectangle(),
           color: Colors.black87,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
